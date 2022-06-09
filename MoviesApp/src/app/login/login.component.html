@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 mt-5">
+            <form novalidate #form="ngForm" (submit)="login(form)">
+                <div *ngIf="invalidLogin" class="alert alert-danger">Invalid username or password.</div>
+                <div class="form-group mb-3">
+                    <label class="form-label">USERNAME</label>
+                    <input type="text" class="form-control" name="username" #username="ngModel" [(ngModel)]="service.formData.username" required
+                    [class.invalid]="username.invalid && username.touched">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">PASSWORD</label>
+                    <input type="password" class="form-control" name="password" #password="ngModel" [(ngModel)]="service.formData.password" required
+                    [class.invalid]="password.invalid && password.touched">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-outline-light mt-3" type="submit" [disabled]="form.invalid">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

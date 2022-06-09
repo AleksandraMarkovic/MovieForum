@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 mt-5">
+            <div class="table table-dark table-striped table-bordered table-hover">
+                <tbody>
+                    <tr *ngFor="let w of service.watchlists">
+                        <td>
+                            <img style="width:100px;" src="../../assets/images/{{w.poster}}" alt="{{w.title}}" />
+                        </td>
+                        <td>
+                            <h5>{{w.title}} ({{w.year}})</h5>
+                            <p>{{w.description}}</p>
+                            <input type="hidden" value="{{w.movieId}}">
+                            <button class="btn btn-outline-light float-end" (click)="delete(w.id)">Remove</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </div>
+        </div>
+    </div>
+</div>

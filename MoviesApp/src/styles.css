@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    background-color: #202124;
+    color: #ffffff;
+}
+
+label {
+    color: #ffffff;
+}
+
+input.invalid, textarea.invalid {
+    border-color: red;
+}
+
+
+.dropdown-item {
+    color: rgba(255,255,255,.55);
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+.comment {
+    outline: 0;
+    border-width: 0 0 2px;
+    background-color: #202124;
+    border-color: #ffffff
+}
+
+.comment:focus {
+    background-color: #202124;
+}

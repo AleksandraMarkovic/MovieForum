@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2 mt-5" *ngFor="let m of service.movies">
+            <div style="height: 300px;">
+                <img src="../../assets/images/{{m.poster}}" alt="{{m.title}}" style="height: inherit;"/>
+            </div>
+            <div class="mt-2">
+                <a routerLink="movies/{{m.id}}">
+                    <h4>{{m.title}} ({{m.year}})</h4>
+                </a>
+                <p *ngIf="m.rating > 0"> <i class="fa fa-star text-warning"></i> {{m.rating}} </p>
+                <p *ngIf="m.rating == 0"> <i class="fa fa-star text-warning"></i> Not rated yet! </p>
+                <button class="btn btn-outline-light mt-3" style="width: 100%;" type="button" (click)="addToWatchlist(m.id)"> 
+                    <i class="fa fa-plus"></i> Watchlist 
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
